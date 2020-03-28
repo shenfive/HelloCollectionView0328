@@ -57,9 +57,6 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     
     
     //MARK:CollectionView Data Source & Delegate
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        2
-    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
@@ -81,5 +78,14 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
 
+    @IBAction func nextPageAction(_ sender: Any) {
+        
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        let nextVC = storyBoard.instantiateViewController(withIdentifier: "myVC") as! MyViewController
+        nextVC.modalPresentationStyle = .fullScreen
+        present(nextVC, animated: true, completion: nil)
+
+        
+    }
 }
 
