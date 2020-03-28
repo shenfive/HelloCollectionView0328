@@ -65,13 +65,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="krB-5A-QuU">
-                                <rect key="frame" x="87" y="65" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="8fo-Gv-JT2"/>
-                                    <constraint firstAttribute="height" constant="128" id="qS2-LM-MRY"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rop-NS-YQu">
                                 <rect key="frame" x="7" y="65" width="46" height="30"/>
                                 <constraints>
@@ -83,13 +76,28 @@
                                     <action selector="nextPageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yWe-06-hfz"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yJi-ql-2Pu">
+                                <rect key="frame" x="0.0" y="165" width="414" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="wsT-lt-UZs"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeNumberOfLine:" destination="BYZ-38-t0r" eventType="valueChanged" id="di5-G1-tP9"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="yJi-ql-2Pu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="53f-FX-kVx"/>
                             <constraint firstItem="Rop-NS-YQu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="7" id="CUU-bh-aRd"/>
+                            <constraint firstItem="yJi-ql-2Pu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Goh-Xg-rEQ"/>
                             <constraint firstItem="rgR-lS-9NG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JDx-wh-jLZ"/>
-                            <constraint firstItem="krB-5A-QuU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KEJ-95-90E"/>
-                            <constraint firstItem="krB-5A-QuU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="KeM-b9-pfh"/>
+                            <constraint firstItem="yJi-ql-2Pu" firstAttribute="top" secondItem="Rop-NS-YQu" secondAttribute="bottom" constant="70" id="Oks-b7-tFT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rgR-lS-9NG" secondAttribute="trailing" id="Plf-Vr-Pac"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rgR-lS-9NG" secondAttribute="bottom" id="YuP-L5-iDd"/>
                             <constraint firstItem="rgR-lS-9NG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="ls3-D1-oai"/>
@@ -99,7 +107,6 @@
                     </view>
                     <connections>
                         <outlet property="myCollectionView" destination="rgR-lS-9NG" id="QGD-fG-gyJ"/>
-                        <outlet property="selectedImageView" destination="krB-5A-QuU" id="PWR-DI-0eR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

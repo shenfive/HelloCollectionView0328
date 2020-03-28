@@ -11,7 +11,6 @@ import UIKit
 class MyViewController: UIViewController {
 
     @IBOutlet weak var mainImage: UIImageView!
-    var theImage:UIImage? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,10 +18,6 @@ class MyViewController: UIViewController {
 
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.mainImage.image = theImage
-    }
     
     
     @IBAction func endUse(_ sender: Any) {

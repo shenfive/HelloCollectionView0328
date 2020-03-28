@@ -11,8 +11,6 @@ import UIKit
 class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
 
     
-
-    @IBOutlet weak var selectedImageView: UIImageView!
     @IBOutlet weak var myCollectionView: UICollectionView!
     var images:[UIImage?] = []
     override func viewDidLoad() {
@@ -35,24 +33,21 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        setCollectionLayout(number: 3)
+
+    }
+    
+    func setCollectionLayout(number:CGFloat){
         let screenSize = UIScreen.main.bounds.size
-        
         let layout = UICollectionViewFlowLayout()
-        
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.scrollDirection = .vertical
         
         let saveAreaWidth = screenSize.width - view.safeAreaInsets.left - view.safeAreaInsets.right
-        layout.itemSize = CGSize(width: saveAreaWidth / 3 , height: saveAreaWidth / 3  )
-        
+        layout.itemSize = CGSize(width: saveAreaWidth / number , height: saveAreaWidth / number  )
         myCollectionView.setCollectionViewLayout(layout, animated: true)
     }
-    
-    
     
     
     
@@ -67,12 +62,12 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         cell.theImageView.image = images[indexPath.row]
         
         cell.exAction = {(image) in
-//            self.selectedImageView.image = image
             let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
             let nextVC = storyBoard.instantiateViewController(withIdentifier: "myVC") as! MyViewController
             nextVC.modalPresentationStyle = .fullScreen
-            nextVC.theImage = image
-            self.present(nextVC, animated: false, completion: nil)
+            self.present(nextVC, animated: true) {
+                nextVC.mainImage.image = image
+            }
         }
         
         return cell
@@ -92,5 +87,11 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
 
         
     }
+    
+    
+    @IBAction func changeNumberOfLine(_ sender: UISegmentedControl) {
+        setCollectionLayout(number: CGFloat(sender.selectedSegmentIndex) + 2 )
+    }
+    
 }
 
