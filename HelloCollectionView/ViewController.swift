@@ -67,7 +67,12 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         cell.theImageView.image = images[indexPath.row]
         
         cell.exAction = {(image) in
-            self.selectedImageView.image = image
+//            self.selectedImageView.image = image
+            let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+            let nextVC = storyBoard.instantiateViewController(withIdentifier: "myVC") as! MyViewController
+            nextVC.modalPresentationStyle = .fullScreen
+            nextVC.theImage = image
+            self.present(nextVC, animated: false, completion: nil)
         }
         
         return cell

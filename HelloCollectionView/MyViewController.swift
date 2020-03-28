@@ -10,13 +10,23 @@ import UIKit
 
 class MyViewController: UIViewController {
 
+    @IBOutlet weak var mainImage: UIImageView!
+    var theImage:UIImage? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
 
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.mainImage.image = theImage
+    }
+    
+    
     @IBAction func endUse(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: false, completion: nil)
     }
     
 }
