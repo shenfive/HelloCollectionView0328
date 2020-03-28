@@ -34,11 +34,11 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
 
     //MARK:CollectionView Data Source & Delegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath)
         cell.backgroundColor = UIColor.red
         return cell
     }
