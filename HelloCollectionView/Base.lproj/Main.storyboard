@@ -76,7 +76,7 @@
                                     <action selector="nextPageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yWe-06-hfz"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yJi-ql-2Pu">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="yJi-ql-2Pu">
                                 <rect key="frame" x="0.0" y="165" width="414" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="wsT-lt-UZs"/>
