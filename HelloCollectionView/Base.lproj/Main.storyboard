@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloCollectionView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rgR-lS-9NG">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="244" width="414" height="618"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lCA-7j-Psg">
                                     <size key="itemSize" width="151" height="139"/>
@@ -33,11 +33,25 @@
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yRH-sJ-Pju">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yRH-sJ-Pju">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5x-VS-DGF">
+                                                    <rect key="frame" x="8" y="8" width="30" height="30"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="0F4-m9-hJb"/>
+                                                        <constraint firstAttribute="width" constant="30" id="jfJ-7g-esQ"/>
+                                                    </constraints>
+                                                    <state key="normal" title="放"/>
+                                                    <connections>
+                                                        <action selector="theAction:" destination="L9A-cc-JKi" eventType="touchUpInside" id="15W-5L-YyT"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="W5x-VS-DGF" firstAttribute="top" secondItem="8vk-nm-ryD" secondAttribute="top" constant="8" id="CY0-0b-Kkl"/>
+                                                <constraint firstItem="W5x-VS-DGF" firstAttribute="leading" secondItem="8vk-nm-ryD" secondAttribute="leading" constant="8" id="IAL-3E-PAm"/>
                                                 <constraint firstItem="yRH-sJ-Pju" firstAttribute="leading" secondItem="8vk-nm-ryD" secondAttribute="leading" id="R9l-7R-Lfx"/>
                                                 <constraint firstItem="yRH-sJ-Pju" firstAttribute="top" secondItem="8vk-nm-ryD" secondAttribute="top" id="obx-Me-U2N"/>
                                                 <constraint firstAttribute="trailing" secondItem="yRH-sJ-Pju" secondAttribute="trailing" id="wSE-sN-AFh"/>
@@ -51,18 +65,28 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="krB-5A-QuU">
+                                <rect key="frame" x="87" y="65" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="8fo-Gv-JT2"/>
+                                    <constraint firstAttribute="height" constant="128" id="qS2-LM-MRY"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="rgR-lS-9NG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JDx-wh-jLZ"/>
+                            <constraint firstItem="krB-5A-QuU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KEJ-95-90E"/>
+                            <constraint firstItem="krB-5A-QuU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="KeM-b9-pfh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rgR-lS-9NG" secondAttribute="trailing" id="Plf-Vr-Pac"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rgR-lS-9NG" secondAttribute="bottom" id="YuP-L5-iDd"/>
-                            <constraint firstItem="rgR-lS-9NG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ls3-D1-oai"/>
+                            <constraint firstItem="rgR-lS-9NG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="ls3-D1-oai"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="myCollectionView" destination="rgR-lS-9NG" id="QGD-fG-gyJ"/>
+                        <outlet property="selectedImageView" destination="krB-5A-QuU" id="PWR-DI-0eR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
