@@ -13,6 +13,7 @@
 		BAB51538242F1237009EF878 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB51536242F1237009EF878 /* Main.storyboard */; };
 		BAB5153A242F1238009EF878 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB51539242F1238009EF878 /* Assets.xcassets */; };
 		BAB5153D242F1238009EF878 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB5153B242F1238009EF878 /* LaunchScreen.storyboard */; };
+		BAB51545242F1989009EF878 /* NewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB51544242F1989009EF878 /* NewCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BAB51539242F1238009EF878 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAB5153C242F1238009EF878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAB5153E242F1238009EF878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAB51544242F1989009EF878 /* NewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				BAB51539242F1238009EF878 /* Assets.xcassets */,
 				BAB5153B242F1238009EF878 /* LaunchScreen.storyboard */,
 				BAB5153E242F1238009EF878 /* Info.plist */,
+				BAB51544242F1989009EF878 /* NewCollectionViewCell.swift */,
 			);
 			path = HelloCollectionView;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				BAB51535242F1237009EF878 /* ViewController.swift in Sources */,
 				BAB51531242F1237009EF878 /* AppDelegate.swift in Sources */,
 				BAB51533242F1237009EF878 /* SceneDelegate.swift in Sources */,
+				BAB51545242F1989009EF878 /* NewCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
