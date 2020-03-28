@@ -8,13 +8,40 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
 
+    
+
+    @IBOutlet weak var myCollectionView: UICollectionView!
+    var images:[UIImage?] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        images = [
+            UIImage.init(named: "image1"),
+            UIImage.init(named: "image2"),
+            UIImage.init(named: "image3"),
+            UIImage.init(named: "image4"),
+            UIImage.init(named: "image5"),
+            UIImage.init(named: "image6"),
+        ]
+        
+        myCollectionView.delegate = self
+        myCollectionView.dataSource = self
+        
+        
     }
 
+    //MARK:CollectionView Data Source & Delegate
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = UICollectionViewCell()
+        cell.backgroundColor = UIColor.red
+        return cell
+    }
 
 }
 
